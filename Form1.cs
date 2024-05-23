@@ -41,7 +41,6 @@ namespace clienteServidor
         {
             var cellValue = dataGridViewClientes.CurrentRow.Cells[2].Value;
             tbNombre.Text = cellValue.ToString();
-
         }
 
         private void InsertarCliente_Click(object sender, EventArgs e)
