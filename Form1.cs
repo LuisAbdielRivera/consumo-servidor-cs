@@ -37,6 +37,11 @@ namespace clienteServidor
             CargarClientes();
         }
 
+        private void Limpiar()
+        {
+            tbNombre.Text = "";
+        }
+
         private void dataGridViewClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var cellValue = dataGridViewClientes.CurrentRow.Cells[2].Value;
@@ -53,6 +58,7 @@ namespace clienteServidor
 
             clienteServiceClient.InsertarCliente(nuevoCliente);
             CargarClientes();
+            Limpiar();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -63,6 +69,7 @@ namespace clienteServidor
 
             clienteServiceClient.ModificarCliente(clienteActualizar);
             CargarClientes();
+            Limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -71,7 +78,8 @@ namespace clienteServidor
 
             clienteServiceClient.EliminarCliente(clienteEliminar.IdCliente);
 
-            CargarClientes() ;
+            CargarClientes();
+            Limpiar();
         }
     }
 }
