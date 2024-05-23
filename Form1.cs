@@ -68,7 +68,11 @@ namespace clienteServidor
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            Cliente clienteEliminar = (Cliente)dataGridViewClientes.SelectedRows[0].DataBoundItem;
 
+            clienteServiceClient.EliminarCliente(clienteEliminar.IdCliente);
+
+            CargarClientes() ;
         }
     }
 }
