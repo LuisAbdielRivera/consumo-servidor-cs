@@ -66,6 +66,9 @@ namespace clienteServidor
             CargarClientes();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
